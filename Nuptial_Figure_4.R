@@ -6,7 +6,7 @@ pageWidthLarge<- 7.08661
 pageHeightLarge <- pageWidthLarge * 0.85
 pagePaper <- 'special'
 fontFamily <- 'Times'
-
+pdf("output/Figure_4.pdf", width=pageWidthLarge, height= pageHeightLarge, family=fontFamily, paper=pagePaper)
 png("output/Figure_4.png", width = 7.08661, height = 7.08661*1.0, units= "in", res = 600, type= "cairo")
 layout(matrix(c(1,2,3,3,4,4,5,5), nrow=2,ncol=4,byrow =  TRUE))
 par(lheight= 0.8)
@@ -40,7 +40,7 @@ mtext("(c)", side = 3, line = 1, adj=0.07, cex=1.0)
 
 ## Tandem2wheel duration plot
 
-boxplot(NuptialColor$Control2Wheel, NuptialColor$ManipulatedTandem2Wheel, 
+boxplot(NuptialColor$ControlTandem2Wheel, NuptialColor$ManipulatedTandem2Wheel, 
         ylab="Tandem to wheel duration (min)",cex.lab = 1.5,cex.axis = 1.5, 
         names = FALSE, outline= FALSE, col= c("indianred3", "rosybrown"), 
         boxwex=0.15,staplewex= 0.3, at= c(0.1,0.4), ylim= c(0,16), xlim= c(0, 0.5))

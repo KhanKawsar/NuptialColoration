@@ -1,7 +1,7 @@
 #Lets start
 
 pageWidthLarge<- 7.08661
-pageHeightLarge <- paperWidthLarge * 1.0
+pageHeightLarge <- pageWidthLarge * 1.0
 pagePaper <- 'special'
 fontFamily <- 'Times'
 
@@ -32,6 +32,5 @@ boxplot(NuptialColor$AdultLipid, NuptialColor$JuvenileLipid, ylab= "Lipid (mg)",
         boxwex=0.15,staplewex= 0.3, at= c(0.1,0.4), ylim= c(0,10), xlim= c(0, 0.5))
 mtext(c("Adult\nmale", "Juvenile\nmale"), at= c(0.1, 0.4), side =1, line = 2, cex = 1.5*par()$cex)
 mtext("(c)", side = 3, line = 1, adj=0.07, cex=1.0)
-
 
 dev.off()
